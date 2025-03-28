@@ -1,0 +1,246 @@
+/* Dark Theme */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+header {
+  background: #1f1f1f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section - Responsive */
+.hero {
+  background: url('asset/hero.jpg') no-repeat center center/cover;
+  height: 120px; /* Adjusted for smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Destination Cards - Responsive Grid */
+.directions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.direction-card {
+  background: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.4);
+  overflow: hidden;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.direction-card:hover {
+  transform: scale(1.05);
+}
+
+.direction-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.direction-card h2 a {
+  text-decoration: none;
+  color: #ff9800;
+}
+
+.direction-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.direction-card p {
+  padding: 10px;
+}
+
+/* Travel Quotes - Responsive Grid */
+/* Travel Quotes - Responsive Grid */
+.travel-quotes {
+  background: linear-gradient(to right, #292929, #333);
+  padding: 40px;
+  text-align: center;
+  font-style: italic;
+  color: white;
+}
+
+.travel-quotes h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+/* Quote Grid - Adjusts for Mobile */
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Individual Quote Styling */
+.quote {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #ff9800;
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Different Colors for Quotes */
+.quote:nth-child(1) { border-left-color: #ff9800; background: #222; }
+.quote:nth-child(2) { border-left-color: #ff5733; background: #2a2a2a; }
+.quote:nth-child(3) { border-left-color: #33ff57; background: #303030; }
+.quote:nth-child(4) { border-left-color: #339fff; background: #3a3a3a; }
+.quote:nth-child(5) { border-left-color: #ffcc00; background: #282828; }
+.quote:nth-child(6) { border-left-color: #ff66b2; background: #353535; }
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delayed Animations for Quotes */
+.quote:nth-child(1) { animation-delay: 0.3s; }
+.quote:nth-child(2) { animation-delay: 0.6s; }
+.quote:nth-child(3) { animation-delay: 0.9s; }
+.quote:nth-child(4) { animation-delay: 1.2s; }
+.quote:nth-child(5) { animation-delay: 1.5s; }
+.quote:nth-child(6) { animation-delay: 1.8s; }
+
+
+/* Fancy Subscription Form */
+.subscribe-form {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+  margin: 20px;
+}
+
+.subscribe-form input {
+  padding: 12px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subscribe-form input::placeholder {
+  color: #ff9800;
+}
+
+.subscribe-form button {
+  background: #ff9800;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+}
+
+.subscribe-form button:hover {
+  background: #ffcc00;
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.8);
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    height: 100px;
+    font-size: 20px;
+  }
+
+  .quotes-container {
+    grid-template-columns: 1fr; /* Single column on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .directions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quotes-container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+
+  .direction-card {
+    width: 90%;
+  }
+
+  .subscribe-form input {
+    width: 90%;
+  }
+}
